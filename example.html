@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery.Countdown Examples</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/darkly/bootstrap.min.css">
+        <link href="css/jquery.countdown.css" rel="stylesheet" media="screen">
+        <script src="js/jquery.countdown.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#start_example1").bind("click", function () {
+                    $("#example1").countdown({"seconds": 10});
+                });
+                $("#example2").countdown({
+                    "seconds": 30,
+                    "ongoing": false,
+                    "selector-start": ".countdown-start",
+                    "selector-pause": ".countdown-pause"
+                });
+                $("#start_example3").bind("click", function () {
+                    $("#example3").countdown({
+                        "seconds": 10,
+                        "warning-time": 5,
+                        "normal-class": "countdown-normal",
+                        "warning-class": "countdown-warning",
+                        "stop-class": "countdown-stop"
+
+                    })
+                });
+                $("#start_example4").bind("click", function () {
+                    $("#example4").countdown({
+                        "seconds": 5,
+                        "prefix-text": "Time left: ",
+                        "stop-text": "Time's up!"
+                    });
+                });
+                $("#here").countdown({"ongoing": true, "seconds": 20, "warning-time": 10});
+            })
+        </script>
+        <style>
+        .container { margin: 150px auto; }
+            .example{
+                border: 1px solid darkgray;
+            }
+        </style>
+    </head>
+    <body><div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/time-clock/countdown-time-zero.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+        <div class="container">
+            <h1>jQuery.Countdown plugin examples</h1>
+            jQuery.Countdown is a simple plugin for countdown seconds from any time to 0. <br>
+            Current time shows as "minutes":"seconds".<br>
+            <hr>
+            <h3>Basic usage</h3>
+            <pre>
+$("#countdown").countdown({"seconds": 10}); </pre>
+            <button class="btn btn-primary" id="start_example1">Show</button><br><br>
+            <div class="alert example" id="example1">00:10</div>
+            <hr>
+            <h3>Control buttons</h3>
+            <pre>
+$("#countdown").countdown({
+    "seconds": 30,
+    "ongoing": false,
+    "selector-start":".countdown-start",
+    "selector-pause":".countdown-pause"
+}); </pre>
+            <div class="alert example" id="example2">00:30</div>
+            <button class="btn btn-success countdown-start">Start</button><button class="btn btn-danger countdown-pause">Pause</button><br><br>
+            <hr>
+            <h3>Special classes and warning time</h3>
+            <pre>
+$("#countdown").countdown({
+    "seconds": 10,
+    "warning-time": 5,
+    "normal-class":"countdown-normal",
+    "warning-class":"countdown-warning",
+    "stop-class":"countdown-stop"
+}); </pre>
+            <button class="btn btn-primary" id="start_example3">Show</button><br><br>
+            <div class="alert example" id="example3">00:10</div>
+
+            <hr>
+            <h3>Additional text</h3>
+            <pre>
+$("#countdown").countdown({
+    "seconds": 5,
+    "prefix-text":"Time left: ",
+    "stop-text":"Time's up!"
+}); </pre>
+            <button class="btn btn-primary" id="start_example4">Show</button><br><br>
+            <div class="alert example" id="example4">00:00</div>
+        </div>
+    </body><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>

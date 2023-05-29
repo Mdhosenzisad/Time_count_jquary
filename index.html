@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery.Countdown Examples</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/darkly/bootstrap.min.css"> -->
+        <link href="css/jquery.countdown.css" rel="stylesheet" media="screen">
+        <script src="js/jquery.countdown.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#start_example1").bind("click", function () {
+                    $("#example1").countdown({"seconds": 10});
+                });
+                $("#example2").countdown({
+                    "seconds": 1800,
+                    "ongoing": false,
+                    "selector-start": ".countdown-start",
+                    "selector-pause": ".countdown-pause"
+                });
+                $("#start_example3").bind("click", function () {
+                    $("#example3").countdown({
+                        "seconds": 10,
+                        "warning-time": 5,
+                        "normal-class": "countdown-normal",
+                        "warning-class": "countdown-warning",
+                        "stop-class": "countdown-stop"
+
+                    })
+                });
+                $("#start_example4").bind("click", function () {
+                    $("#example4").countdown({
+                        "seconds": 5,
+                        "prefix-text": "Time left: ",
+                        "stop-text": "Time's up!"
+                    });
+                });
+                $("#here").countdown({"ongoing": true, "seconds": 20, "warning-time": 10});
+            })
+        </script>
+        <style>
+        .container { margin: 150px auto; }
+            .example{
+                border: 1px solid rgb(255, 255, 255);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+
+          <div id="time">
+            <div class="row">
+              <div class="col-lg-12 .col-md-12 .col-sm-12">
+                <h2 class="mb-0 text-center"><span>uy</span> lab</h2>
+                <h3 class="mb-0 text-center">wd-2304</h3>
+                <h4 class="text-center">We WIll be Back Soon</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 .col-md-12 .col-sm-12">
+                <ul class="px-0">
+                  <li>
+                    <h1 class="text-center timer-quick example" id="example2" data-seconds-left="80"></h1>
+                  </li>    
+                </ul>     
+              </div>
+      
+            </div>
+            
+            <div class="row">
+              <div class="col-lg-12 .col-md-12 .col-sm-12 button-container">
+                
+                <button id="startButton" class="countdown-start">Start</button>
+                <button id="endButton" class="countdown-pause">Pause</button>
+               
+              </div>
+             
+            </div>
+          </div>
+
+          
+            <!-- <div class="alert example" id="example2">00:30</div>
+            <button class="btn btn-success countdown-start">Start</button>
+            <button class="btn btn-danger countdown-pause">Pause</button><br><br>
+            <hr> -->
+        </div>
+    </body>
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>

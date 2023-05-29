@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+/* html, body {
+  background: black;
+  color: white;
+  height: 100vh;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+} */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+ul,ol{
+  list-style: none;
+}
+li{
+  text-decoration: none;
+}
+img{
+  vertical-align: middle;
+}
+#time{
+  background: #6673e4;
+}
+.container {
+  width: 90%;
+  height: 100vh;
+}
+.container h1{
+  font-size: 200px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  height: 250px;
+  border: 5px solid rgb(200, 138, 30);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  /* font-family: 'Orbitron', sans-serif; */
+  /* font-family: 'Bebas Neue', cursive; */
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 900;
+  color: gold;
+  
+}
+.container h2{
+  color: #fff;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 100px;
+  text-shadow: 0 0 10px rgb(0, 255, 8);
+  margin-top: 50px;
+}
+.container h2 span{
+  color: transparent;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 1px;
+}
+.container h3{
+  color: #fff;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 60px;
+}
+.container h4{
+  color: #fff;
+  font-family: 'Bebas Neue', cursive;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  font-size: 36px;
+  text-shadow: 0 0 10px gold;
+}
+
+
+.jst-minutes {
+  float: left;
+  text-align: center;
+}
+.jst-seconds {
+  float: left;
+  text-align: center;
+}
+.jst-clearDiv {
+  clear: both;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+  
+}
+
+.button-container button {
+  font-size: 16px;
+  margin: 10px;
+background-color: #e8b53d;
+  border: 0 none;
+  border-radius: 30px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 33px;
+  padding: 0 24px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+#timer-buttons #btn-short-break, #timer-buttons #btn-long-break, #timer-buttons.break #btn-start-timer
+{
+    display: none;
+}
+#timer-buttons.break #btn-short-break, #timer-buttons.break #btn-long-break
+{
+    display: inline;
+}
+.countdown-normal{
+  color: #3c763d;
+  background-color: #dff0d8;
+  border: 1px normal #d6e9c6;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.countdown-warning{
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border: 1px normal #faebcc;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.countdown-stop{
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1px normal #ebccd1;
+  padding: 15px;
+  border-radius: 5px;
+}
+.body{
+  background-color: #6673e4;
+}
